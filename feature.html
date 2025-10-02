@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agregar Tareas</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 18px; }
+    input[type="text"] { padding:8px; width:260px; }
+    button { padding:8px 12px; margin-left:8px; }
+  </style>
+</head>
+<body>
+  <h1>Agregar tarea</h1>
+
+  <!-- Formulario requerido -->
+  <form id="form-tarea" action="/procesar" method="post">
+    <label for="tarea" class="sr-only">Tarea</label>
+    <input type="text" id="tarea" name="tarea" placeholder="Escribe una tarea..." required />
+    <button type="submit">Agregar tarea</button>
+  </form>
+</body>
+</html>
