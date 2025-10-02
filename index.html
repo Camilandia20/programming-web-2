@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agregar Tareas</title>
-</head>
-<body>
-  <h1>Agregar tarea</h1>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Agregar Tareas</title>
+    <link rel="stylesheet" href="formulario.css">
+    </head>
+    <body>
+    <h1>Agregar tarea</h1>
 
-  <!-- Formulario requerido -->
-  <form id="form-tarea" action="/procesar" method="post">
-    <div>
-      <label for="nombre">Nombre de la tarea:</label>
-      <input type="text" id="nombre" name="nombre" required />
-    </div>
+    <!-- Formulario requerido -->
+    <form id="form-tarea" action="/procesar" method="post">
+        <div>
+        <label for="nombre">Nombre de la tarea:</label>
+        <input type="text" id="nombre" name="nombre" required />
+        </div>
 
-    <div>
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" required></textarea>
-    </div>
+        <div>
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+        </div>
 
-    <div>
-      <label for="categoria">Categoría:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="">Seleccione una categoría</option>
-        <option value="estudio">Estudio</option>
-        <option value="trabajo">Trabajo</option>
-        <option value="personal">Personal</option>
-      </select>
-    </div>
+        <div>
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">Seleccione una categoría</option>
+            <option value="estudio">Estudio</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="personal">Personal</option>
+        </select>
+        </div>
 
-    <div>
-      <button type="submit">Agregar tarea</button>
-    </div>
-  </form>
+        <div>
+        <button type="submit">Agregar tarea</button>
+        </div>
+    </form>
 </body>
 </html>
