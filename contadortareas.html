@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+      <h2>Lista de tareas</h2>  
+      <ul id="lista">
+    <li><input type="checkbox" onchange="contar()"> Borrar todo el contenido que se trabajó la clase anterior y dejar la estructura index.hml app.css appp.js</li>
+    <li><input type="checkbox" onchange="contar()"> Eliminar tarea Implementar botón para eliminar tareas de la lista.</li>
+    <li><input type="checkbox" onchange="contar()"> Eliminar tarea Implementar botón para eliminar tareas de la lista.</li>
+    <li><input type="checkbox" onchange="contar()">Vista de estadísticas Crear una sección que muestre: número total de tareas, completadas y pendientes. (otro html)</li>
+    <li><input type="checkbox" onchange="contar()">Lista de tareas (HTML + JS) Mostrar en pantalla la lista de tareas dinámicamente con JavaScript.</li>
+    <li><input type="checkbox" onchange="contar()"> Estilos del formulario Dar estilos con CSS (alineación, colores, responsive).</li>
+    <li><input type="checkbox" onchange="contar()"> Función para agregar tareas (JS) Programar en app.js la función que agrega nuevas tareas a la lista.</li>
+    <li><input type="checkbox" onchange="contar()"> Agregar un nav (con estilos) y links cuadrados</li>
+    <li><input type="checkbox" onchange="contar()"> Documentación en README Escribir en README.md:  Objetivo de la app.  Pasos para instalar y ejecutar.  Roles de cada estudiante</li>
+    <li><input type="checkbox" onchange="contar()"> Marcar tareas como completadas Agregar checkbox o botón para marcar/desmarcar una tarea como completada.</li>
+    <li><input type="checkbox" onchange="contar()"> Formulario para agregar tareas Crear un formulario en index.html con campo de texto + botón “Agregar tarea”</li>
+    <li><input type="checkbox" onchange="contar()"> Página “Acerca de” Crear about.html con información del equipo (cada estudiante agrega su nombre y rol).</li>
+    <li><input type="checkbox" onchange="contar()"> Agregar un footer (con estilos)</li>
+    <li><input type="checkbox" onchange="contar()"> Diseño del encabezado (header) Implementar un header con el título de la app y un logo (puede ser un ícono). La idea es que quede la imagen a la izquierda y el titulo a la derecha
+</li>
+    <li><input type="checkbox" onchange="contar()"> Crear un html que sea el login de la app (tiene que tener el link que redirija a crear cuenta si no lo ha creado)</li>
+    <li><input type="checkbox" onchange="contar()"> Crear el css del login</li>
+    <li><input type="checkbox" onchange="contar()"> Crear un botón cambiar idioma que salga en todas las pestañas de la app</li>
+    <li><input type="checkbox" onchange="contar()">Hacer que el botón cambiar idioma funcione</li>
+    <li><input type="checkbox" onchange="contar()"> Crear el css del html sign in</li>
+     <li><input type="checkbox" onchange="contar()"> Contador de tareas pendientes Mostrar cuántas tareas están pendientes y cuántas completadas.</li>
+  </ul>
+
+  <p>Pendientes: <span id="pendientes">20</span></p>
+  <p>Completadas: <span id="completadas">0</span></p>
+    
+   <script>
+    function contar() {
+      const checks = document.querySelectorAll("#lista input[type='checkbox']");
+      let completadas = 0;
+      checks.forEach(c => { if (c.checked) completadas++; });
+
+      document.getElementById("completadas").textContent = completadas;
+      document.getElementById("pendientes").textContent = checks.length - completadas;
+    }
+  </script>
+</body>
+</html>
