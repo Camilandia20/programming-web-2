@@ -1,0 +1,39 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  flex-wrap: wrap;       
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  flex-shrink: 0;           
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap;  
+}
+
+
+@media (max-width: 600px) {
+  .app-header {
+    justify-content: center; 
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 18px;         
+    text-align: center;
+  }
+
+  .logo {
+    margin-right: 10px;     
+  }
+}
