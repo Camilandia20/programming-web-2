@@ -1,59 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Lista de Tareas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    input[type="text"] {
-      padding: 8px;
-      width: 250px;
-    }
-
-    button {
-      padding: 8px 12px;
-      margin-left: 10px;
-    }
-
-    ul {
-      margin-top: 20px;
-      list-style-type: disc;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agregar Tareas</title>
 </head>
 <body>
-  <h1>Agregar Tareas</h1>
+  <h1>Agregar tarea</h1>
 
-  <form id="form-tarea">
-    <input type="text" id="nueva-tarea" placeholder="Escribe una tarea..." required />
-    <button type="submit">Agregar tarea</button>
+  <!-- Formulario requerido -->
+  <form id="form-tarea" action="/procesar" method="post">
+    <div>
+      <label for="nombre">Nombre de la tarea:</label>
+      <input type="text" id="nombre" name="nombre" required />
+    </div>
+
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" required></textarea>
+    </div>
+
+    <div>
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Seleccione una categoría</option>
+        <option value="estudio">Estudio</option>
+        <option value="trabajo">Trabajo</option>
+        <option value="personal">Personal</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Agregar tarea</button>
+    </div>
   </form>
-
-  <ul id="lista-tareas">
-    <!-- Las tareas se agregarán aquí -->
-  </ul>
-
-  <script>
-    const form = document.getElementById('form-tarea');
-    const input = document.getElementById('nueva-tarea');
-    const lista = document.getElementById('lista-tareas');
-
-    form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita que se recargue la página
-
-      const tareaTexto = input.value.trim();
-
-      if (tareaTexto !== '') {
-        const nuevaTarea = document.createElement('li');
-        nuevaTarea.textContent = tareaTexto;
-        lista.appendChild(nuevaTarea);
-        input.value = ''; // Limpiar el campo
-      }
-    });
-  </script>
 </body>
 </html>
+
