@@ -1,18 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="app.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Agregar Tareas</title>
 </head>
 <body>
-    <h2>Tareas</h2>
-    <input type="text" id="tareaInput" placeholder="Escribe una tarea...">
-    <button onclick="agregarTarea()">Agregar</button>
 
-    <ul id="listaTareas"></ul>
+  <h2>Agregar tarea</h2>
 
-    <script src="appp.js"></script>
+  <!-- Formulario requerido -->
+  <form id="form-tarea">
+    <div>
+      <label for="nombre">Nombre de la tarea:</label>
+      <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." required />
+    </div>
+
+    <div>
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..."></textarea>
+    </div>
+
+    <div>
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Seleccione una categoría</option>
+        <option value="estudio">Estudio</option>
+        <option value="trabajo">Trabajo</option>
+        <option value="personal">Personal</option>
+      </select>
+    </div>
+
+    <div>
+      <button type="submit">Agregar Tarea</button>
+    </div>
+  </form>
+
+  <ul id="listaTareas"></ul>
+
+  <script src="appp.js"></script>
 </body>
 </html>
