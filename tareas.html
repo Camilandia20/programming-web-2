@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tareas.css">
+</head>
+<body>
+    <div class="stats">
+        <h1>📊 Estadísticas de Tareas</h1>
+        <div class="stat total">Total: <span id="total">0</span></div>
+        <div class="stat completadas">Completadas: <span id="completadas">0</span></div>
+        <div class="stat pendientes">Pendientes: <span id="pendientes">0</span></div>
+    </div>
+    <script>
+        const tareas = JSON.parse(localStorage.getItem('tareas')) || [];
+        const total = tareas.length;
+        const completadas = tareas.filter(t => t.completada).length;
+        const pendientes = total - completadas;
+        document.getElementById('total').textContent = total;
+        document.getElementById('completadas').textContent = completadas;
+        document.getElementById('pendientes').textContent = pendientes;
+    </script>
+</body>
+</html>l
