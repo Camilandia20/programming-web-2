@@ -9,22 +9,23 @@
 </head>
 <body>
 
-    <header class="app-header">
-        <img src="logo.png" alt="Logo" class="logo" />
-        <h1 class="title">Gestion de tareas</h1>
-      </header>
-  <h1>Agregar tarea</h1>
+  <header class="app-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1 class="title">Gestión de tareas</h1>
+  </header>
+
+  <h2>Agregar tarea</h2>
 
   <!-- Formulario requerido -->
-  <form id="form-tarea" action="/procesar" method="post">
+  <form id="form-tarea">
     <div>
       <label for="nombre">Nombre de la tarea:</label>
-      <input type="text" id="nombre" name="nombre" required />
+      <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." required />
     </div>
 
     <div>
       <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" required></textarea>
+      <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..."></textarea>
     </div>
 
     <div>
@@ -38,8 +39,12 @@
     </div>
 
     <div>
-      <button type="submit">Agregar tarea</button>
+      <button type="submit">Agregar Tarea</button>
     </div>
   </form>
+
+  <ul id="listaTareas"></ul>
+
+  <script src="appp.js"></script>
 </body>
 </html>
