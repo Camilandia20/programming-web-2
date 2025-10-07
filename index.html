@@ -4,43 +4,47 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Agregar Tareas</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" href="logo2.png" type="image/x-icon" />
 </head>
 <body>
+
+  <header class="app-header">
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1 class="title">Gestión de tareas</h1>
+  </header>
 
   <h2>Agregar tarea</h2>
 
   <!-- Formulario requerido -->
   <form id="form-tarea">
-    
-    <div>
-      
-      <label for="nombre">Nombre de la tarea:</label>
-      <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." required />
-    </div>
+  <div>
+    <label for="tareaInput">Nombre de la tarea:</label>
+    <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." required />
+  </div>
 
-    <div>
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..."></textarea>
-    </div>
+  <div>
+    <label for="descripcion">Descripción:</label>
+    <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..."></textarea>
+  </div>
 
-    <div>
-      <label for="categoria">Categoría:</label>
-      <select id="categoria" name="categoria" required>
-        <option value="">Seleccione una categoría</option>
-        <option value="estudio">Estudio</option>
-        <option value="trabajo">Trabajo</option>
-        <option value="personal">Personal</option>
-      </select>
-    </div>
+  <div>
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" name="categoria" required>
+      <option value="">Seleccione una categoría</option>
+      <option value="estudio">Estudio</option>
+      <option value="trabajo">Trabajo</option>
+      <option value="personal">Personal</option>
+    </select>
+  </div>
 
-    <div>
-      <button type="submit">Agregar Tarea</button>
-    </div>
-  </form>
+  <div>
+    <button type="submit">Agregar tarea</button>
+  </div>
+</form>
 
-  <ul id="listaTareas"></ul>
+<ul id="listaTareas"></ul>
 
-  <script src="appp.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
-       
