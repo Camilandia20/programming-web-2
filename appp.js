@@ -1,25 +1,19 @@
-const inputTarea = document.getElementById("nuevaTarea");  // descripción
-const listaTareas = document.getElementById("listaTareas");
-const inputTareanm = document.getElementById("nombre");   // nombre
-const inputTareacr = document.getElementById("categoria"); // categoría
+document.getElementById("form-tarea").addEventListener("submit", function(event) {
+    event.preventDefault();
 
-function agregarTarea() {
-    const nombre = inputTareanm.value.trim();
-    const descripcion = inputTarea.value.trim();
-    const categoria = inputTareacr.value;
+    let nombre = document.getElementById("tareaInput").value.trim();
+    let descripcion = document.getElementById("descripcion").value.trim();
+    let categoria = document.getElementById("categoria").value;
 
-    if (nombre !== "" && descripcion !== "" && categoria !== "") {
-        const li = document.createElement("li");
-        li.innerHTML = `<strong>${nombre}</strong> 
-                        <em>(${categoria})</em>: 
-                        ${descripcion}`;
-        listaTareas.appendChild(li);
-
-        // limpiar inputs
-        inputTareanm.value = "";
-        inputTarea.value = ""; 
-        inputTareacr.value = "";
-    } else {
-        alert("Por favor completa todos los campos antes de agregar la tarea.");
+    if (nombre === "" || descripcion === "" || categoria === "") {
+        alert("Por favor, completa todos los campos.");
+        return;
     }
-}
+
+    let li = document.createElement("li");
+    li.innerHTML = `<strong>${nombre}</strong> - ${descripcion} <em>(${categoria})</em>`;
+
+    document.getElementById("listaTareas").appendChild(li);
+
+    document.getElementById("form-tarea").reset();
+});
