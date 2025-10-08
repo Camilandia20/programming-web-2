@@ -1,0 +1,102 @@
+.contenedor {
+    justify-content: center;
+
+}
+
+body {
+
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(181, 163, 118);
+    justify-self: unset;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+    justify-self: center;
+    padding: 10px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px black; 
+    width: 300px;
+    margin: auto; 
+}
+
+h1 {
+    text-align: center;
+    color: rgb(240, 240, 240);
+   -webkit-text-stroke: 2px rgb(58, 29, 8); 
+    margin-bottom: 20px;
+    font-size: 40px; 
+
+}
+
+label{
+    display: block;
+    margin-top: 20px; 
+    font-size: small;
+    margin-left: 10px;
+}
+
+.Int{
+    display: flex;         
+    gap: 10px;              
+}
+
+input, select, textarea {
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;    
+    transform: matrix();
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+.acciones {
+    text-align: center; 
+    margin-bottom: 15px; 
+}
+
+.acciones button {
+    padding: 10px 20px;   
+    margin: 5px;          
+    font-size: 14px;      
+    background-color: #e1d0b7;
+    border: 2px solid #f6f6f6;
+    border-radius: 6px;   
+    cursor: pointer;      
+    transition: 0.8s; 
+  
+}
+
+.acciones button:hover{ 
+    background-color: #b6aeae; 
+    color: rgb(250, 250, 247);  
+}
+
+button[type="submit"]{
+    padding: 9px 15px;
+    margin: 5px;
+    background-color: #97e380;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="reset"]{
+    padding: 9px 15px;
+    margin: 5px;
+    background-color: #7d3b2eb3;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #b88a73;
+    color: rgb(249, 243, 243);
+}
