@@ -9,3 +9,8 @@ footer {
     width: 100%;
 }
 
+
+.completada {
+  text-decoration: line-through;
+  color: gray;
+}
