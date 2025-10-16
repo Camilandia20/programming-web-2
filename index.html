@@ -3,44 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Agregar Tareas</title>
+  <title data-i18n="titulo">Agregar Tareas</title>
 </head>
 <body>
 
-  <h2>Agregar tarea</h2>
-
+  <h2 data-i18n="subtitulo">Agregar tarea</h2>
+  
   <!-- Formulario requerido -->
   <form id="form-tarea">
-    
     <div>
-      
-      <label for="nombre">Nombre de la tarea:</label>
-      <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." required />
+      <label for="nombre" data-i18n="label_nombre">Nombre de la tarea:</label>
+      <input type="text" id="tareaInput" name="nombre" placeholder="Escribe una tarea..." data-i18n-placeholder="placeholder_tarea" required />
     </div>
 
     <div>
-      <label for="descripcion">Descripción:</label>
-      <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..."></textarea>
+      <label for="descripcion" data-i18n="label_descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" placeholder="Describe la tarea..." data-i18n-placeholder="placeholder_descripcion"></textarea>
     </div>
 
     <div>
-      <label for="categoria">Categoría:</label>
+      <label for="categoria" data-i18n="label_categoria">Categoría:</label>
       <select id="categoria" name="categoria" required>
-        <option value="">Seleccione una categoría</option>
-        <option value="estudio">Estudio</option>
-        <option value="trabajo">Trabajo</option>
-        <option value="personal">Personal</option>
+        <option value="" data-i18n="opcion_seleccione">Seleccione una categoría</option>
+        <option value="estudio" data-i18n="opcion_estudio">Estudio</option>
+        <option value="trabajo" data-i18n="opcion_trabajo">Trabajo</option>
+        <option value="personal" data-i18n="opcion_personal">Personal</option>
       </select>
     </div>
 
     <div>
-      <button type="submit">Agregar Tarea</button>
+      <button type="submit" data-i18n="boton_agregar">Agregar Tarea</button>
     </div>
   </form>
 
   <ul id="listaTareas"></ul>
 
+  <button id="btnIdioma">🌐 Cambiar idioma</button>
+
+  <script src="https://unpkg.com/i18next@21.6.13/dist/umd/i18next.min.js"></script>
   <script src="appp.js"></script>
+  
 </body>
 </html>
        
